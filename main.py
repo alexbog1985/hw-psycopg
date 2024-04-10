@@ -75,7 +75,6 @@ def add_phones(connection, client_id, phone_numbers):
                 INSERT INTO phones(client_id, phone_number)
                 VALUES (%s, %s) RETURNING phone_number, client_id;
                 """, (client_id, phone_number))
-                print(cur.fetchone())
 
 
 def change_client(connection, client_id, first_name=None, last_name=None, email=None, phones=None):
